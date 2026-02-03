@@ -10,25 +10,24 @@ Office.onReady(() => {
 });
 
 /**
- * Shows a notification when the add-in command is executed.
+ * Executes when the add-in command is invoked.
+ * For Word, insert a simple message into the document and then complete the event.
  * @param event
  */
 function action(event: Office.AddinCommands.Event) {
-  const message: Office.NotificationMessageDetails = {
-    type: Office.MailboxEnums.ItemNotificationMessageType.InformationalMessage,
-    message: "Performed action.",
-    icon: "Icon.80x80",
-    persistent: true,
-  };
-
-  // Show a notification message.
-  Office.context.mailbox.item?.notificationMessages.replaceAsync(
-    "ActionPerformanceNotification",
-    message
-  );
-
-  // Be sure to indicate when the add-in command function is complete.
-  event.completed();
+  if (Office.context && Office.context.document && Office.context.document.setSelectedDataAsync) {
+    Office.context.document.setSelectedDataAsync(
+      "Performed action.",
+      { coercionType: Office.CoercionType.Text },
+      () => {
+        // Be sure to indicate when the add-in command function is complete.
+        event.completed();
+      }
+    );
+  } else {
+    // If document APIs are not available, just complete the event.
+    event.completed();
+  }
 }
 
 // Register the function with Office.
