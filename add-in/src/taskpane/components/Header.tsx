@@ -19,7 +19,7 @@ const useStyles = makeStyles({
   message: {
     fontSize: tokens.fontSizeHero900,
     fontWeight: tokens.fontWeightRegular,
-    fontColor: tokens.colorNeutralBackgroundStatic,
+    color: tokens.colorNeutralBackgroundStatic,
   },
 });
 
