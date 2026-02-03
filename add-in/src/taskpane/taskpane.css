@@ -1,0 +1,156 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: #fafafa;
+}
+
+/* App container */
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Main content */
+.app-main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Tagging section */
+.tagging-section {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.input-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.tag-dropdown {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.tag-dropdown:hover {
+  border-color: #0078d4;
+}
+
+.tag-dropdown:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.1);
+}
+
+.tag-dropdown:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.tag-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: #0078d4;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tag-button:hover:not(:disabled) {
+  background: #005a9e;
+}
+
+.tag-button:active:not(:disabled) {
+  background: #004578;
+}
+
+.tag-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Status section */
+.status-section {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.status-line {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+  min-height: 20px;
+}
+
+/* Info section */
+.info-section {
+  background: #f0f8ff;
+  border-left: 4px solid #0078d4;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.info-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0078d4;
+}
+
+.info-section ol {
+  margin-left: 20px;
+  color: #555;
+}
+
+.info-section li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
