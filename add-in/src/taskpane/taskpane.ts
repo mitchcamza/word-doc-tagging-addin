@@ -9,6 +9,6 @@ export async function insertText(text: string) {
       await context.sync();
     });
   } catch (error) {
-    console.log("Error: " + error);
+    console.error("Error:", error);
   }
 }
