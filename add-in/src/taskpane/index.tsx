@@ -2,10 +2,11 @@ import * as React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./components/App";
 import { FluentProvider, webLightTheme } from "@fluentui/react-components";
+import "./taskpane.css";
 
 /* global document, Office, module, require, HTMLElement */
 
-const title = "Contoso Task Pane Add-in";
+const title = "Word Doc Tagging Add-In";
 
 const rootElement: HTMLElement | null = document.getElementById("container");
 const root = rootElement ? createRoot(rootElement) : undefined;
