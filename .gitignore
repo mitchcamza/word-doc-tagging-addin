@@ -10,6 +10,9 @@ dist/
 build/
 *.js.map
 
+# Repo setup
+repo-setup/
+
 # Office Add-in certificates (dev only - don't commit)
 *.pfx
 *.pem
