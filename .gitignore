@@ -10,9 +10,6 @@ dist/
 build/
 *.js.map
 
-# Setup scripts
-scripts/
-
 # Office Add-in certificates (dev only - don't commit)
 *.pfx
 *.pem
